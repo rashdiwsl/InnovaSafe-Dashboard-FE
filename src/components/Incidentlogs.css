@@ -1,0 +1,157 @@
+/* Container */
+.incidentlogs-container {
+  padding: 2rem;
+  background-color: #f9fafb;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.incidentlogs-card {
+  width: 100%;
+  max-width: 1200px;
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Header */
+.incidentlogs-header h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+.incidentlogs-header p {
+  color: #6b7280;
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Filters */
+.incidentlogs-filters {
+  display: flex;
+  gap: 1rem; /* space between all items */
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+  align-items: center;
+}
+
+.search-box {
+  position: relative;
+  flex: none; /* fixed width */
+  width: 220px;
+  margin-right: 0.5rem; /* extra spacing to buttons */
+}
+
+.search-box input {
+  width: 100%;
+  padding: 0.4rem 0.8rem 0.4rem 2rem;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  font-size: 0.9rem;
+}
+
+.search-icon {
+  position: absolute;
+  top: 50%;
+  left: 0.5rem;
+  transform: translateY(-50%);
+  color: #9ca3af;
+  width: 1rem;
+  height: 1rem;
+}
+
+.incidentlogs-filters button {
+  background-color: #fbbf24;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.incidentlogs-filters button:hover {
+  background-color: #f59e0b;
+  transform: translateY(-1px);
+}
+
+/* Table */
+.incidentlogs-table table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+}
+
+.incidentlogs-table th,
+.incidentlogs-table td {
+  padding: 0.6rem 0.8rem;
+  text-align: left;
+}
+
+.incidentlogs-table th {
+  background-color: #f3f4f6;
+  font-weight: 500;
+}
+
+.incidentlogs-table tr.saved-row {
+  background-color: #dbeafe;
+}
+
+/* Actions buttons */
+.actions button {
+  padding: 0.3rem 0.6rem;
+  margin-right: 0.3rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: all 0.15s ease-in-out;
+}
+
+.actions .edit {
+  background-color: #3b82f6;
+  color: #fff;
+}
+
+.actions .edit:hover {
+  background-color: #2563eb;
+}
+
+.actions .saved {
+  background-color: #2563eb;
+  color: #fff;
+}
+
+.actions .discard {
+  background-color: #e5e7eb;
+  color: #374151;
+}
+
+.actions .discard:hover {
+  background-color: #d1d5db;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .incidentlogs-filters {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .search-box {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .incidentlogs-filters button {
+    width: 100%;
+    justify-content: center;
+  }
+}
