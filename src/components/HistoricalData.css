@@ -1,0 +1,145 @@
+.historical-data-container {
+  display: flex;
+  height: 100vh;
+  background-color: #f3f4f6;
+}
+
+.main-content {
+  flex: 1;
+  padding: 2rem;
+}
+
+.upload-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  padding: 2rem;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  color: #6b7280;
+  margin-bottom: 2rem;
+}
+
+.upload-area {
+  border: 2px dashed #d1d5db;
+  border-radius: 12px;
+  padding: 4rem 2rem;
+  text-align: center;
+  background: #f9fafb;
+  margin-bottom: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.upload-area.dragging {
+  border-color: #3b82f6;
+  background: #eff6ff;
+}
+
+.upload-icon {
+  color: #3b82f6;
+  margin-bottom: 1rem;
+}
+
+.upload-text {
+  color: #374151;
+  font-weight: 500;
+}
+
+.upload-subtext {
+  color: #6b7280;
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+}
+
+.file-input {
+  display: none;
+}
+
+.select-files-btn {
+  display: inline-block;
+  padding: 0.5rem 1.5rem;
+  background: #9ca3af;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.select-files-btn:hover {
+  background: #6b7280;
+}
+
+.progress-container {
+  margin-bottom: 1rem;
+}
+
+.progress-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin-bottom: 0.5rem;
+}
+
+.progress-bar {
+  background: #e5e7eb;
+  border-radius: 6px;
+  height: 8px;
+  width: 100%;
+}
+
+.progress-fill {
+  background: #3b82f6;
+  height: 8px;
+  border-radius: 6px;
+  transition: width 0.3s ease;
+}
+
+.success-message {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #d1fae5;
+  border: 1px solid #6ee7b7;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  color: #065f46;
+  font-weight: 500;
+}
+
+.success-icon {
+  color: #059669;
+}
+
+.upload-btn {
+  padding: 0.5rem 2rem;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.upload-btn.disabled {
+  background: #d1d5db;
+  color: #6b7280;
+  cursor: not-allowed;
+}
+
+.upload-btn.active {
+  background: #9ca3af;
+  color: white;
+  cursor: pointer;
+}
+
+.upload-btn.active:hover {
+  background: #6b7280;
+}
