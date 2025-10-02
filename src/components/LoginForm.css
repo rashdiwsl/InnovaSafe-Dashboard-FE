@@ -1,19 +1,72 @@
+/* Center the login container in viewport */
+body, html {
+  height: 100%;
+  margin: 0;
+}
+/* Wrapper */
+.login-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to bottom, #2c2c2c, #5c3c00, #d4af37);
+  overflow: hidden;
+}
+
+
+/* Car animation */
+.car-animation {
+  position: absolute;
+  top: 65%;
+  left: -150px;
+  animation: drive 2s forwards;
+}
+
+.car {
+  width: 100px;
+  height: auto;
+}
+
+@keyframes drive {
+  0% {
+    left: -150px;
+  }
+  50% {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  100% {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+/* Login container appears after car slides */
 .login-container {
   width: 350px;
-  margin: auto;
   padding: 30px;
   background: #ffffff;
   border-radius: 12px;
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   text-align: center;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+  animation-delay: 2s; /* delay until car finishes */
 }
 
-.login-container h2 {
-  margin-bottom: 20px;
-  font-size: 22px;
-  color: #333;
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
+/* Form styles */
 .login-form {
   display: flex;
   flex-direction: column;
@@ -38,14 +91,22 @@
   padding: 12px;
   border: none;
   border-radius: 6px;
-  background-color: #f4a261;
-  color: white;
+  background: linear-gradient(135deg, #d4af37, #ffd700); /* gold gradient */
+  color: #2c2c2c; /* dark text for contrast */
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
   transition: 0.3s;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* subtle shadow */
 }
 
 .login-form button:hover {
-  background-color: #e76f51;
+  background: linear-gradient(135deg, #ffd700, #e6c200); /* hover brighter gold */
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+
+.error-message {
+  color: red;
+  margin-top: 10px;
 }
