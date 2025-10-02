@@ -33,7 +33,7 @@
 /* Filters */
 .incidentlogs-filters {
   display: flex;
-  gap: 1rem; /* space between all items */
+  gap: 1rem;
   flex-wrap: wrap;
   margin-bottom: 1.5rem;
   align-items: center;
@@ -41,9 +41,9 @@
 
 .search-box {
   position: relative;
-  flex: none; /* fixed width */
+  flex: none;
   width: 220px;
-  margin-right: 0.5rem; /* extra spacing to buttons */
+  margin-right: 0.5rem;
 }
 
 .search-box input {
@@ -52,6 +52,12 @@
   border-radius: 8px;
   border: 1px solid #d1d5db;
   font-size: 0.9rem;
+  transition: border 0.2s;
+}
+
+.search-box input:focus {
+  outline: none;
+  border-color: #3b82f6;
 }
 
 .search-icon {
@@ -138,6 +144,131 @@
   background-color: #d1d5db;
 }
 
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+/* Modal Box */
+.modal {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  width: 420px;
+  max-width: 90%;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.25s ease;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.modal-header h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.close-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #6b7280;
+  transition: color 0.2s;
+}
+
+.close-btn:hover {
+  color: #ef4444;
+}
+
+/* Modal Form */
+.modal-form label {
+  display: block;
+  margin: 0.6rem 0 0.3rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #374151;
+}
+
+.modal-form input,
+.modal-form select {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  font-size: 0.9rem;
+  transition: border 0.2s;
+}
+
+.modal-form input:focus,
+.modal-form select:focus {
+  outline: none;
+  border-color: #3b82f6;
+}
+
+/* Modal Actions */
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.6rem;
+  margin-top: 1rem;
+}
+
+.save-btn {
+  background: #3b82f6;
+  color: white;
+  border: none;
+  padding: 0.45rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.2s;
+}
+
+.save-btn:hover {
+  background: #2563eb;
+}
+
+.cancel-btn {
+  background: #e5e7eb;
+  color: #374151;
+  border: none;
+  padding: 0.45rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.2s;
+}
+
+.cancel-btn:hover {
+  background: #d1d5db;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* Responsive adjustments */
 @media screen and (max-width: 768px) {
   .incidentlogs-filters {
@@ -153,5 +284,9 @@
   .incidentlogs-filters button {
     width: 100%;
     justify-content: center;
+  }
+
+  .modal {
+    width: 95%;
   }
 }
