@@ -13,11 +13,19 @@
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 5px;
+  display: flex;
+  align-items: center;
 }
 
 .logo .highlight {
-  color: black;
+  background-color: #ef4444; /* red background */
+  color: #fff;              /* white text */
+  padding: 4px 8px;         /* some padding */
+  border-radius: 4px;       /* optional rounded corners */
+  margin-left: 4px;         /* small gap from "Innova" */
+  font-size: 24px;           /* same size as logo text */
 }
+
 
 .tagline {
   font-size: 12px;
